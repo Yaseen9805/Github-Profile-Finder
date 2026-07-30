@@ -1,54 +1,45 @@
----
+# GitHub User Search
 
-# 🔍 GitHub User Search
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=black)
+![GitHub API](https://img.shields.io/badge/GitHub_API-181717?logo=github&logoColor=white)
 
-A simple web application built with **HTML, CSS, and JavaScript** that allows users to search for GitHub profiles and view key details along with recent repositories.
+## Short description
 
----
+A small tool for looking up GitHub profiles. Search a username and it pulls the person's profile details and recent repositories straight from the GitHub API.
 
-## 🚀 Features
+## Technologies
 
-* Search GitHub users by username
-* Display profile details (avatar, bio, followers, etc.)
-* Show latest repositories with stars
-* Loading and error handling states
-* Data persistence using `localStorage`
+HTML5, CSS3, JavaScript (Fetch API, DOM manipulation, localStorage), GitHub REST API
 
----
+## Features
 
-## 🛠 Tech Stack
+- Search for any GitHub user by username
+- Displays profile details such as avatar, bio, and follower count
+- Shows the user's latest repositories along with star counts
+- Loading and error states while a search is in progress or fails
+- Searched users are stored in localStorage so recent lookups persist between visits
 
-* HTML5
-* CSS3
-* JavaScript (Fetch API, DOM Manipulation, Local Storage)
+## The process
 
----
+This was built to get comfortable calling a real public API and handling the different states a request can be in (loading, success, not found) rather than assuming every request succeeds. Storing previously searched users in localStorage was the extra piece added on top of the basic search, so the app keeps some memory of what you've looked up without needing a backend.
 
-## ⚙️ How It Works
+## What I learned
 
-* Enter a GitHub username and click **Search**
-* App fetches user data and repositories from GitHub API
-* Displays profile info and latest repos
-* Stores searched users in browser storage
+- Fetching data from a public REST API and mapping the JSON response to the UI
+- Handling loading and error states explicitly instead of just showing a blank screen while waiting
+- Persisting simple data client-side with localStorage
+- Structuring DOM updates so the profile and repo list re-render cleanly on every new search
 
----
+## How it can be improved
 
-## ▶️ Run Locally
+- Trigger a search on pressing Enter, not just on clicking the button
+- Add a way to clear search history
+- Add pagination for users with a large number of repositories
+- General UI/UX polish
 
-```bash id="1sb0kf"
-git clone https://github.com/your-username/github-user-search.git
-cd github-user-search
-```
+## How to run the project
 
-Open `index.html` in your browser.
-
----
-
-## 📌 Future Improvements
-
-* Search on Enter key
-* Clear search history
-* Pagination for repositories
-* Better UI/UX enhancements
-
----
+1. Clone the repo
+2. Open `index.html` directly in your browser
